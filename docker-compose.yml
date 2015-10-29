@@ -26,6 +26,12 @@ cassandra:
   ports:
     - "9042:9042"
 
+gorongosa:
+  image: duas/counttool
+  working_dir: /src
+  ports: 
+    - "3434:3434"
+
 panoptes:
   dockerfile: Dockerfile.dev
   build: ./
@@ -41,3 +47,4 @@ panoptes:
     - kafka
     - redis
     - cassandra
+    - gorongosa
